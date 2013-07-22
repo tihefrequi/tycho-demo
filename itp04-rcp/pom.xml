@@ -20,7 +20,7 @@ Contributors:
 	<name>RCP Parent</name>
 
 	<properties>
-		<tycho-version>0.18.0</tycho-version>
+		<tycho-version>0.18.1</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -31,6 +31,7 @@ Contributors:
 		<module>example-feature-2</module>
 		<module>helios</module>
 	</modules>
+
 
 	<build>
 		<plugins>
