@@ -4,7 +4,7 @@ Tycho Demo Projects
 Sample projects demonstrating how to use Tycho.
 
 | Folder                | Description           |
-| ----------------------|-----------------------|
+| --------------------- | --------------------- |
 | itp01                 | Simple application that demonstrates how to build an eclipse plug-in and execute JUnit tests |
 | itp02                 | Simple application that demonstrates [use of pom-first dependencies](https://wiki.eclipse.org/Tycho/How_Tos/Dependency_on_pom-first_artifacts) |
 | itp03-crossplatform   | _(Deprecated)_ Trivial cross-platform RCP application that displays a SWT MessageBox with current OSGi os/ws/arch properties. Specify either -Pe35 or -Pe36 to build for specified eclipse version |
