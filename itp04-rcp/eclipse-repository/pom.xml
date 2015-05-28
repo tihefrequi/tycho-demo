@@ -36,6 +36,15 @@ Contributors:
 						<linux>tar.gz</linux>
 						<macosx>tar.gz</macosx>
 					</formats>
+           <products>
+              <product>
+                <id>example.product.id</id>
+                <rootFolders>
+                  <!-- for MacOSX, make sure you use a folder ending with .app , see bug 463670 -->
+                  <macosx>Eclipse.app</macosx>
+                </rootFolders>
+              </product>
+            </products>
 				</configuration>
 				<executions>
 					<execution>
