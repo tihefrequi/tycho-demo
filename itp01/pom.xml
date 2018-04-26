@@ -6,7 +6,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>tycho.demo.itp01</module>
+    <!--<module>tycho.demo.itp01</module>-->
     <module>tycho.demo.itp01.tests</module>
   </modules>
 
@@ -18,7 +18,7 @@
    <repository>
      <id>helios</id>
      <layout>p2</layout>
-     <url>http://download.eclipse.org/releases/helios</url>
+     <url>http://download.eclipse.org/releases/oxygen</url>
    </repository>
   </repositories>
 
@@ -30,6 +30,15 @@
         <version>${tycho-version}</version>
         <extensions>true</extensions>
       </plugin>
+      <plugin>
+  <groupId>org.eclipse.tycho</groupId>
+  <artifactId>tycho-surefire-plugin</artifactId>
+  <version>${tycho-version}</version>
+  <configuration>
+    <!-- workaround to make javax.annotation accessible -->
+    <!-- <argLine>--add-modules ALL-SYSTEM -XstartOnFirstThread</argLine>-->
+  </configuration>
+</plugin>
     </plugins>
   </build>
 
