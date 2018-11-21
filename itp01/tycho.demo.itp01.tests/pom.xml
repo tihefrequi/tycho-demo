@@ -21,6 +21,16 @@
           <useUIHarness>true</useUIHarness>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration> 
+          <!--workaround bug 532302: set EE to JavASE-11 to make sure we resolve Import-Package: javax.annoation against bundle javax.annotation 
+          (as opposed to system package from bundle's BREE JavaSE-1.8) -->
+          <executionEnvironment>JavaSE-11</executionEnvironment>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
