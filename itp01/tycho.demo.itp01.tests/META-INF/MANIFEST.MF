@@ -5,4 +5,3 @@ Bundle-SymbolicName: tycho.demo.itp01.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.junit;bundle-version="4.0.0"
-Import-Package: javax.annotation

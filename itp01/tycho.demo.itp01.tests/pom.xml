@@ -28,7 +28,7 @@
         <configuration> 
           <!--workaround bug 532302: set EE to JavASE-11 to make sure we resolve Import-Package: javax.annoation against bundle javax.annotation 
           (as opposed to system package from bundle's BREE JavaSE-1.8) -->
-          <executionEnvironment>JavaSE-11</executionEnvironment>
+<!--         <executionEnvironment>JavaSE-11</executionEnvironment> -->
         </configuration>
       </plugin>
     </plugins>
