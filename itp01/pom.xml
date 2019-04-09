@@ -17,7 +17,7 @@
 	</modules>
 
 	<properties>
-		<tycho-version>1.4.0</tycho-version>
+		<tycho.version>1.4.0</tycho.version>
 	</properties>
 
 	<repositories>
@@ -33,9 +33,10 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<extensions>true</extensions>
 			</plugin>
+<!--			
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
@@ -50,17 +51,20 @@
 					</target>
 				</configuration>
 			</plugin>
+-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.3</version>
 				<configuration>
 					<preparationGoals>org.eclipse.tycho:tycho-versions-plugin:${tycho-version}:update-eclipse-metadata org.apache.maven.plugins:maven-scm-plugin:1.9.5:add org.apache.maven.plugins:maven-scm-plugin:1.9.5:checkin</preparationGoals>
+					<completionGoals>org.eclipse.tycho:tycho-versions-plugin:${tycho-version}:update-eclipse-metadata org.apache.maven.plugins:maven-scm-plugin:1.9.5:add org.apache.maven.plugins:maven-scm-plugin:1.9.5:checkin</completionGoals>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.11.2</version>
 				<executions>
 					<execution>
 						<id>default-cli</id>
@@ -76,15 +80,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.3</version>
-				<configuration>
-					<preparationGoals>org.eclipse.tycho:tycho-versions-plugin:${tycho-version}:update-eclipse-metadata org.apache.maven.plugins:maven-scm-plugin:1.9.5:add org.apache.maven.plugins:maven-scm-plugin:1.9.5:checkin</preparationGoals>
-					<completionGoals>org.eclipse.tycho:tycho-versions-plugin:${tycho-version}:update-eclipse-metadata org.apache.maven.plugins:maven-scm-plugin:1.9.5:add org.apache.maven.plugins:maven-scm-plugin:1.9.5:checkin</completionGoals>
-				</configuration>
-			</plugin>
+
 		</plugins>
 	</build>
 
