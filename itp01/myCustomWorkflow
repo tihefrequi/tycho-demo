@@ -6,14 +6,14 @@ checkPlugins
 checkPluginDependencies
 prepareVersions
 checkAether
-setReleaseVersions
+setReleaseVersionsTycho
 addSpyPlugin
 buildReleaseArtifacts
 removeSpyPlugin
 checkForScmChanges
 tagScm
 detectReleaseArtifacts
-setDevVersion
+setDevVersionTycho
 serializeMetadata
 exec[copy-artifact] {
   data=echo hello
@@ -21,4 +21,3 @@ exec[copy-artifact] {
 }
 # installArtifacts ## i dont need them now. / but maybe later when i want to build projects with maven and without eclipse-plugin
 # deployArtifacts  ## i dont need them now. / but maybe later when i want to build projects with maven and without eclipse-plugin
- 
