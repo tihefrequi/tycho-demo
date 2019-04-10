@@ -1,0 +1,24 @@
+storeScmRevision
+checkProjectVersions
+checkParentVersions
+checkDependencies
+checkPlugins
+checkPluginDependencies
+prepareVersions
+checkAether
+setReleaseVersions
+addSpyPlugin
+buildReleaseArtifacts
+removeSpyPlugin
+checkForScmChanges
+tagScm
+detectReleaseArtifacts
+setDevVersion
+serializeMetadata
+exec[copy-artifact] {
+  data=echo hello
+  rollbackData=echo bye
+}
+# installArtifacts ## i dont need them now. / but maybe later when i want to build projects with maven and without eclipse-plugin
+# deployArtifacts  ## i dont need them now. / but maybe later when i want to build projects with maven and without eclipse-plugin
+ 
